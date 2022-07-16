@@ -1,0 +1,190 @@
+urlclever:  https://console.clever-cloud.com/users/me/addons/addon_3d9c2bf9-e0ab-44b7-9886-a9c0ab721442
+host:   btlrejikhqpbw5timh9x-postgresql.services.clever-cloud.com
+database: btlrejikhqpbw5timh9x
+user: u1hxzi9chroh7sp9pw7j
+pass:  y6QdzaV34ubPzEb7zagE
+port : 5432
+connection URI : postgresql://u1hxzi9chroh7sp9pw7j:y6QdzaV34ubPzEb7zagE@btlrejikhqpbw5timh9x-postgresql.services.clever-cloud.com:5432/btlrejikhqpbw5timh9x
+===============================================================
+base de Datos
+
+db: tallerMec_arquitectura_db
+
+https://dev.mysql.com/doc/refman/8.0/en/example-auto-increment.html
+===============================================================
+create table especialidad(
+	idespecialidad  serial primary key,
+	nombre varchar not null
+);
+insert into especialidad (nombre) values('mantenimiento eléctrico y eléctronico');
+insert into especialidad (nombre) values('Ingeniero mecánico automotriz');
+select *from especialidad;
+
+create table especialidad(   //MYSQL
+	idespecialidad MEDIUMINT NOT NULL AUTO_INCREMENT,
+	nombre varchar not null,
+    PRIMARY KEY (idespecialidad)
+);
+
+create table cliente(
+	idcliente  serial primary key,
+	nombre varchar not null,
+	appaterno varchar not null,
+	apmaterno varchar,
+	correoelectronico varchar,
+	celular integer not null,
+	direccion varchar not null
+);
+insert into cliente (nombre, appaterno,apmaterno, correoelectronico, celular,direccion) 
+values('Heidy Wendy','Gatica', 'Lopez','Heidy@gmail.com', 70000123,'av. cumavi 4to anillo');
+insert into cliente (nombre, appaterno,apmaterno, correoelectronico, celular,direccion) 
+values('Camila','tifelp', '','Camila@gmail.com', 70000111,'av. Mutualista 3er anillo');
+select *from cliente;
+
+create table cliente(   //MYSQL
+	idcliente MEDIUMINT NOT NULL AUTO_INCREMENT,
+	nombre varchar(30) not null,
+	appaterno varchar(30) not null,
+	apmaterno varchar(30),
+	correoelectronico varchar(30),
+	celular integer not null,
+	direccion varchar(30) not null,
+    PRIMARY KEY (idcliente)
+);
+
+create table mecanico(
+	idmecanico  serial primary key,
+	nombre varchar not null,
+	appaterno varchar not null,
+	apmaterno varchar,
+	celular integer not null,
+	idespecialidad integer references especialidad(idespecialidad) on delete cascade on update cascade
+);
+insert into mecanico (nombre, appaterno,apmaterno, celular,idespecialidad) 
+values('Lorenzo','Camacho', 'Torrez',80000000,1);
+insert into mecanico (nombre, appaterno,apmaterno, celular,idespecialidad) 
+values('Jorge','Ticona', 'Beltran',68004563,2);
+select *from mecanico;
+
+create table mecanico( //MYSQL
+	idmecanico MEDIUMINT NOT NULL AUTO_INCREMENT,
+	nombre varchar(30) not null,
+	appaterno varchar(30) not null,
+	apmaterno varchar(30),
+	celular integer not null,
+     PRIMARY KEY (idmecanico),
+	idespecialidad integer references especialidad(idespecialidad) on delete cascade on update cascade
+);
+
+create table vehiculo(
+	idvehiculo  serial primary key,
+	marca varchar not null,
+	modelo varchar not null,
+	color varchar not null,
+	matricula varchar not null,	
+	idcliente integer references cliente(idcliente) on delete cascade on update cascade,
+	estado varchar not null
+);
+insert into Vehiculo (marca, modelo,color, matricula,idcliente, estado) 
+values('toyota','rav4', 'blanco','1234XLK',1,'Mantenimiento');
+insert into Vehiculo (marca, modelo,color, matricula,idcliente, estado) 
+values('Suzuki','alto', 'plateado','1174TCL',2,'Mantenimiento');
+select *from Vehiculo;
+
+
+create table vehiculo(  //MYSQL
+	idvehiculo MEDIUMINT NOT NULL AUTO_INCREMENT,
+	marca varchar(30) not null,
+	modelo varchar(30) not null,
+	color varchar(30) not null,
+	matricula varchar(30) not null,	
+     PRIMARY KEY (idvehiculo),
+	idcliente integer references cliente(idcliente) on delete cascade on update cascade,
+	estado varchar(30) not null
+);
+
+create table reparacion(
+	idreparacion serial primary key,
+	fecha date not null,	
+	observacion varchar,
+	costototal decimal(18,2) not null, 
+	idvehiculo integer references vehiculo(idvehiculo ) on delete cascade on update cascade	
+);
+select *from reparacion;
+
+create table reparacion(  //MYSQL
+    idreparacion MEDIUMINT NOT NULL AUTO_INCREMENT,
+	fecha date not null,	
+	observacion varchar(30),
+	costototal decimal(18,2) not null, 
+    PRIMARY KEY (idreparacion),
+	idvehiculo integer references vehiculo(idvehiculo ) on delete cascade on update cascade	
+);
+
+
+create table detallereparacion(
+	iddetallereparacion serial primary key,
+	idreparacion integer references reparacion(idreparacion ) on delete cascade on update cascade,
+	idmecanico  integer references mecanico(idmecanico) on delete cascade on update cascade,
+	observacion varchar not null,
+	precio decimal(18,2) not null
+);
+select *from detallereparacion;
+
+create table detallereparacion(   //MYSQL
+	iddetallereparacion MEDIUMINT NOT NULL AUTO_INCREMENT,
+    PRIMARY KEY (iddetallereparacion),
+	idreparacion integer references reparacion(idreparacion ) on delete cascade on update cascade,
+	idmecanico  integer references mecanico(idmecanico) on delete cascade on update cascade,
+	observacion varchar(30) not null,
+	precio decimal(18,2) not null
+);
+--------------------------------------------------------------------------------------------------
+CONEXION
+
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package Conexion;
+
+import java.sql.Connection;
+import java.sql.Driver;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+
+/**
+ *
+ * @author JeTf
+ */
+public class Conexion {
+    private Connection con;
+    private String pass="";
+    private String URL="jdbc:mysql://localhost:3306/tallermec_arquitectura_db";
+    private String user="root"; 
+    
+    
+//    private String pass="admin";
+//    private String URL="jdbc:postgresql://127.0.0.1/tallerMec_arquitectura_db";
+//    private String user="postgres"; 
+//    
+//    private Connection con;
+//    private String pass="y6QdzaV34ubPzEb7zagE";
+//    private String URL="jdbc:postgresql://127.0.0.1/tallerMec_arquitectura_db";
+//    private String user="u1hxzi9chroh7sp9pw7j"; 
+
+    public Conexion() {
+    }
+    public Connection conectar(){
+        try {
+            //Class.forName("org.postgresql.Driver");
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            con= DriverManager.getConnection(URL,this.user,this.pass);
+        } catch (ClassNotFoundException | SQLException e) {
+                            System.out.println("Error conectar Mysql... "+e.getMessage());
+        }
+        return con;
+    }
+}
+

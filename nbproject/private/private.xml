@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/C:/Users/JeTf/Desktop/SEM_2_2021/ARQUITECTURA/SEM_1_2022/ExamenFINAL/Examen3TallerMecanico/src/Datos/DDetalleReparacion.java</file>
+            <file>file:/C:/Users/JeTf/Desktop/SEM_2_2021/ARQUITECTURA/SEM_1_2022/ExamenFINAL/Examen3TallerMecanico/src/Negocio/NReparacion.java</file>
+            <file>file:/C:/Users/JeTf/Desktop/SEM_2_2021/ARQUITECTURA/SEM_1_2022/ExamenFINAL/Examen3TallerMecanico/src/PatronProxy/ICliente.java</file>
+            <file>file:/C:/Users/JeTf/Desktop/SEM_2_2021/ARQUITECTURA/SEM_1_2022/ExamenFINAL/Examen3TallerMecanico/src/PatronEstado/EnRevision.java</file>
+            <file>file:/C:/Users/JeTf/Desktop/SEM_2_2021/ARQUITECTURA/SEM_1_2022/ExamenFINAL/Examen3TallerMecanico/src/PatronEstado/Estado.java</file>
+            <file>file:/C:/Users/JeTf/Desktop/SEM_2_2021/ARQUITECTURA/SEM_1_2022/ExamenFINAL/Examen3TallerMecanico/src/Presentacion/PVehiculo.java</file>
+            <file>file:/C:/Users/JeTf/Desktop/SEM_2_2021/ARQUITECTURA/SEM_1_2022/ExamenFINAL/Examen3TallerMecanico/src/Presentacion/PCliente.java</file>
+            <file>file:/C:/Users/JeTf/Desktop/SEM_2_2021/ARQUITECTURA/SEM_1_2022/ExamenFINAL/Examen3TallerMecanico/src/Negocio/NVehiculo.java</file>
+            <file>file:/C:/Users/JeTf/Desktop/SEM_2_2021/ARQUITECTURA/SEM_1_2022/ExamenFINAL/Examen3TallerMecanico/src/Presentacion/PEspecialidad.java</file>
+            <file>file:/C:/Users/JeTf/Desktop/SEM_2_2021/ARQUITECTURA/SEM_1_2022/ExamenFINAL/Examen3TallerMecanico/src/PatronEstado/EstadoVehiculo.java</file>
+            <file>file:/C:/Users/JeTf/Desktop/SEM_2_2021/ARQUITECTURA/SEM_1_2022/ExamenFINAL/Examen3TallerMecanico/src/Datos/DMecanico.java</file>
+            <file>file:/C:/Users/JeTf/Desktop/SEM_2_2021/ARQUITECTURA/SEM_1_2022/ExamenFINAL/Examen3TallerMecanico/src/Datos/DVehiculo.java</file>
+            <file>file:/C:/Users/JeTf/Desktop/SEM_2_2021/ARQUITECTURA/SEM_1_2022/ExamenFINAL/Examen3TallerMecanico/src/Datos/PatronPlantilla/ListarTodos.java</file>
+            <file>file:/C:/Users/JeTf/Desktop/SEM_2_2021/ARQUITECTURA/SEM_1_2022/ExamenFINAL/Examen3TallerMecanico/src/PatronEstado/EnMantenimiento.java</file>
+            <file>file:/C:/Users/JeTf/Desktop/SEM_2_2021/ARQUITECTURA/SEM_1_2022/ExamenFINAL/Examen3TallerMecanico/src/Datos/DCliente.java</file>
+            <file>file:/C:/Users/JeTf/Desktop/SEM_2_2021/ARQUITECTURA/SEM_1_2022/ExamenFINAL/Examen3TallerMecanico/src/Negocio/NMecanico.java</file>
+            <file>file:/C:/Users/JeTf/Desktop/SEM_2_2021/ARQUITECTURA/SEM_1_2022/ExamenFINAL/Examen3TallerMecanico/src/Datos/PatronPlantilla/ListarPorID.java</file>
+            <file>file:/C:/Users/JeTf/Desktop/SEM_2_2021/ARQUITECTURA/SEM_1_2022/ExamenFINAL/Examen3TallerMecanico/src/Presentacion/PReparacion.java</file>
+            <file>file:/C:/Users/JeTf/Desktop/SEM_2_2021/ARQUITECTURA/SEM_1_2022/ExamenFINAL/Examen3TallerMecanico/src/Datos/DReparacion.java</file>
+            <file>file:/C:/Users/JeTf/Desktop/SEM_2_2021/ARQUITECTURA/SEM_1_2022/ExamenFINAL/Examen3TallerMecanico/src/Presentacion/PMecanico.java</file>
+            <file>file:/C:/Users/JeTf/Desktop/SEM_2_2021/ARQUITECTURA/SEM_1_2022/ExamenFINAL/Examen3TallerMecanico/src/Negocio/NCliente.java</file>
+            <file>file:/C:/Users/JeTf/Desktop/SEM_2_2021/ARQUITECTURA/SEM_1_2022/ExamenFINAL/Examen3TallerMecanico/src/PatronProxy/ClienteProxy.java</file>
+            <file>file:/C:/Users/JeTf/Desktop/SEM_2_2021/ARQUITECTURA/SEM_1_2022/ExamenFINAL/Examen3TallerMecanico/src/PatronEstado/EnReparacion.java</file>
+            <file>file:/C:/Users/JeTf/Desktop/SEM_2_2021/ARQUITECTURA/SEM_1_2022/ExamenFINAL/Examen3TallerMecanico/src/PatronEstado/Entregado.java</file>
+            <file>file:/C:/Users/JeTf/Desktop/SEM_2_2021/ARQUITECTURA/SEM_1_2022/ExamenFINAL/Examen3TallerMecanico/src/Conexion/Conexion.java</file>
+        </group>
+    </open-files>
+</project-private>
